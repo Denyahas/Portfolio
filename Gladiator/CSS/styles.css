@@ -1,0 +1,658 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", serif;
+}
+
+.container {
+  margin: 0 120px;
+}
+
+header {
+  position: absolute;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  column-gap: 200px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.navigation a {
+  color: #fff;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: font-weight 0.2s ease;
+}
+
+.navigation a:hover {
+  font-weight: 700;
+}
+
+.navigation li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.hero {
+  background-image: url(../Images/Bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.heroText {
+  max-width: 787px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+h1 {
+  color: #fff;
+  padding-top: 384px;
+  font-size: 128px;
+  font-weight: 600;
+}
+
+.hero h2 {
+  margin-top: -30px;
+  color: #ff000f;
+  font-size: 48px;
+}
+
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 90px;
+}
+
+#about img {
+  width: 670px;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.textBlock {
+  text-align: right;
+  margin-right: 83px;
+}
+
+.text {
+  font-size: 24px;
+  line-height: 39px;
+  font-weight: 300;
+  max-width: 932px;
+}
+
+.text p {
+  margin-bottom: 39px;
+}
+
+#price {
+  padding-top: 90px;
+  padding-bottom: 34px;
+  background-color: #f3f3f3;
+}
+
+#price h2 {
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 70px;
+  margin: 50px 0;
+}
+.card {
+  border-radius: 20px;
+  padding: 59px 50px 27px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  background: url(../Images/body\ 1.png) no-repeat 100% 109% / 95%;
+  transition: transform 0.3s ease;
+}
+
+.card:nth-of-type(2) {
+  background: url(../Images/body\ 2.png) no-repeat 100% 109% / 95%;
+}
+
+.card:nth-of-type(3) {
+  background: url(../Images/body\ 3.png) no-repeat 100% 109% / 95%;
+}
+
+.card:nth-of-type(4) {
+  background: url(../Images/body\ 4.png) no-repeat 100% 109% / 95%;
+}
+
+.card h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.numberOfVisits {
+  font-family: "New Rocker", system-ui;
+  font-size: 200px;
+  margin: 95px 0 95px;
+}
+
+.card:nth-of-type(4) .numberOfVisits {
+  font-size: 50px;
+  line-height: 246px;
+}
+
+.card:nth-of-type(4) {
+  padding: 59px 35px 27px;
+  height: 100%;
+}
+
+.price {
+  text-align: center;
+  color: #ff000f;
+  font-weight: 200;
+}
+
+.priceText {
+  font-size: 30px;
+}
+
+.priceSum {
+  font-size: 50px;
+}
+
+.freezeSubscription {
+  text-align: center;
+}
+
+#trainers {
+  padding: 90px 0 122px 0;
+}
+
+#trainers h2 {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.trainersCards {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+
+.trainersCard {
+  cursor: pointer;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px 0 35px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.trainersCard a {
+  color: #000;
+  text-decoration: none;
+}
+
+.trainersCard:hover,
+.trainersCard:active {
+  transform: scale(105%);
+}
+
+.trainersText {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  flex: 1;
+}
+.name {
+  position: absolute;
+  transform: rotate(-90deg);
+  transform-origin: 0% 0%;
+  top: 45%;
+  left: -0.8%;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.trainersImg img {
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 15px;
+}
+
+.trainersInst {
+  font-weight: 500;
+  font-size: 18px;
+  margin-left: -35px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#app {
+  padding: 100px 0 150px;
+  background-color: #000;
+  color: #fff;
+}
+
+#app h2 {
+  color: white;
+  font-size: 75px;
+  font-weight: 900;
+  max-width: 738px;
+  margin-right: 100px;
+}
+
+.footerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerFlex ul {
+  position: absolute;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.footerFlex li,
+.footerFlex a {
+  text-decoration: none;
+  margin-bottom: 2px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.qrAndContacts img {
+  width: 240px;
+  border: 20px solid #fff;
+}
+
+@media screen and (max-width: 1850px) {
+  .textBlock {
+    max-width: 700px;
+  }
+  .text {
+    font-size: 18px;
+  }
+
+  #about img {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #price,
+  #about,
+  #trainers {
+    padding-top: 50px;
+  }
+
+  .cards {
+    margin-top: 30px;
+  }
+
+  #trainers h2 {
+    margin-bottom: 30px;
+  }
+
+  #about {
+    padding: 50px 75px 0;
+  }
+
+  #price {
+    padding: 50px 75px 20px;
+  }
+
+  #trainers {
+    padding: 50px 75px 50px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .textBlock {
+    margin-right: 50px;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #about img {
+    width: 400px;
+  }
+
+  .card,
+  .card:nth-of-type(4) {
+    padding: 29px 20px 7px;
+  }
+
+  .numberOfVisits {
+    font-size: 150px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template: 1fr / 300px 300px;
+    gap: 30px;
+  }
+
+  .card:nth-of-type(4) .numberOfVisits {
+    line-height: 3.68;
+  }
+
+  .trainersCards {
+    display: grid;
+    grid-template: 1fr / 300px 300px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #app h2 {
+    font-size: 50px;
+    text-align: right;
+    max-width: 500px;
+    margin-right: 50px;
+  }
+
+  h1 {
+    font-size: 100px;
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+
+  header {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .heroText {
+    width: 620px;
+    align-items: end;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #about {
+    flex-direction: column;
+  }
+
+  .textBlock {
+    text-align: left;
+  }
+
+  #app {
+    padding-top: 75px;
+  }
+  #app h2 {
+    margin-right: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .footerFlex {
+    flex-direction: column-reverse;
+  }
+
+  #app ul {
+    margin-top: 170px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .header-container {
+    gap: 50px;
+  }
+
+  .heroText {
+    width: 500px;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+
+  .hero h2 {
+    margin-top: -25px;
+    font-size: 35px;
+  }
+
+  #about {
+    padding: 30px 30px 0;
+  }
+
+  #about img {
+    width: 300px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .textBlock {
+    margin-right: 0;
+    max-width: 80%;
+  }
+
+  .text p {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .cards {
+    grid-template: 1fr / 250px 250px;
+  }
+
+  .card {
+    max-width: 250px;
+  }
+
+  .card h3 {
+    font-size: 30px;
+  }
+
+  .numberOfVisits {
+    font-size: 150px;
+  }
+
+  .priceText {
+    font-size: 30px;
+  }
+
+  .priceSum {
+    font-size: 30px;
+  }
+
+  .card:nth-of-type(4) .numberOfVisits {
+    font-size: 35px;
+  }
+
+  .trainersCards {
+    grid-template: 1fr / 250px 250px;
+    gap: 30px;
+  }
+
+  .name {
+    top: 37%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navigation li:not(:last-of-type) {
+    margin-right: 15px;
+  }
+  .navigation a {
+    font-size: 14px;
+  }
+
+  .heroText {
+    width: 370px;
+  }
+
+  .hero {
+    background-position: 70% 50%;
+  }
+
+  .hero h2 {
+    text-shadow: -1px 0px 1px #000;
+    margin-top: -17px;
+    font-size: 25px;
+  }
+
+  h1 {
+    text-shadow: -1px 0px 1px #000;
+    font-size: 60px;
+  }
+
+  .cards {
+    grid-template: 1fr / 300px;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+
+  .trainersCards {
+    grid-template: 1fr / 300px;
+  }
+
+  .trainersCard {
+    max-width: 300px;
+  }
+
+  #app h2 {
+    font-size: 30px;
+  }
+
+  #app img {
+    width: 150px;
+    border: 10px solid #fff;
+  }
+
+  #app ul {
+    margin-top: 100px;
+  }
+
+  .footerFlex li,
+  .footerFlex a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .heroText {
+    width: 250px;
+  }
+
+  .hero {
+    background-position: 67% 50%;
+  }
+
+  .hero h2 {
+    margin-top: -10px;
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 40px;
+    padding-top: 420px;
+  }
+
+  .navigation li:not(:last-of-type) {
+    margin-right: 15px;
+  }
+
+  .navigation a {
+    font-size: 12px;
+  }
+
+  #about {
+    padding: 50px 15px 0;
+  }
+
+  #about img {
+    width: 250px;
+  }
+
+  #price {
+    padding: 50px 15px 15px;
+  }
+
+  .cards {
+    grid-template: 1fr / 250px;
+  }
+
+  .card {
+    max-width: 250px;
+  }
+
+  .trainersCards {
+    grid-template: 1fr / 250px;
+  }
+
+  .trainersCard {
+    max-width: 250px;
+  }
+
+  #app h2 {
+    font-size: 25px;
+  }
+
+  #app ul {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .hero {
+    background-size: cover;
+  }
+
+  h1 {
+    margin-top: 30%;
+  }
+}
