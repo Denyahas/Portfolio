@@ -894,10 +894,6 @@ footer {
     padding-top: 0;
   }
 
-  #projects {
-    height: 90vh;
-  }
-
   .projectsCards {
     width: 100%;
   }
@@ -1008,10 +1004,6 @@ footer {
 
   .container {
     padding: 0 15px;
-  }
-
-  #projects {
-    height: 60vh;
   }
 
   .projectsCard input {
