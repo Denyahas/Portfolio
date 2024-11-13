@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=The+Girl+Next+Door&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      type="Image/x-icon"
+      href="https://i.postimg.cc/rFMdKY0V/favicon.png"
+      rel="icon"
+    />
+    <title>Denyaha</title>
+  </head>
+  <body>
+    <!-- navbar with id is for freeCodeCamp -->
+    <navbar id="navbar">
+      <a href="#"></a>
+    </navbar>
+
+    <header class="anim">
+      <div class="windowControl">
+        <button class="closeWindow" id="closeWindowBtn" type="button">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="5"
+              y1="5"
+              x2="10"
+              y2="10"
+              stroke="#A8443B"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <line
+              x1="5"
+              y1="10"
+              x2="10"
+              y2="5"
+              stroke="#A8443B"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <button class="collapseWindow" id="collapseWindowBtn" type="button">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 15 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="4"
+              y1="7.5"
+              x2="11"
+              y2="7.5"
+              stroke="#a67a1c"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <button class="expandWindow" id="fullScreenBtn" type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="9"
+            height="9"
+            viewBox="0 0 9 9"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3.88008 0.0387714C3.68981 -0.0400364 3.4708 0.00352745 3.32518 0.149147L0.149087 3.32513C0.00346402 3.47075 -0.0400195 3.68975 0.0388004 3.88001C0.117518 4.07027 0.303265 4.19432 0.509174 4.19432H3.68523C3.96643 4.19432 4.1944 3.96636 4.1944 3.68516V0.509175C4.1944 0.30324 4.07034 0.117579 3.88008 0.0387714ZM8.85086 5.6749C8.99647 5.52929 9.04004 5.31029 8.96123 5.12003C8.88242 4.92977 8.69675 4.80571 8.49081 4.80571H5.31476C5.03354 4.80571 4.80559 5.03368 4.80559 5.31487V8.49086C4.80559 8.69677 4.92964 8.88241 5.1199 8.96123C5.31017 9.04005 5.52917 8.99646 5.6748 8.85084L8.85086 5.6749Z"
+              fill="#3c8233"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="navigationAndSearch">
+        <navbar>
+          <ul>
+            <li>
+              <a href="#about">About me.</a>
+              <button id="closeAbout">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="5"
+                    y1="5"
+                    x2="10"
+                    y2="10"
+                    stroke="#00000080"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="5"
+                    y1="10"
+                    x2="10"
+                    y2="5"
+                    stroke="#00000080"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <a href="#projects">Projects.</a>
+              <button id="closeProjects">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="5"
+                    y1="5"
+                    x2="10"
+                    y2="10"
+                    stroke="#00000080"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="5"
+                    y1="10"
+                    x2="10"
+                    y2="5"
+                    stroke="#00000080"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <a href="#contacts">Contacts. </a>
+              <button id="closeContacts">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="5"
+                    y1="5"
+                    x2="10"
+                    y2="10"
+                    stroke="#00000080"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="5"
+                    y1="10"
+                    x2="10"
+                    y2="5"
+                    stroke="#00000080"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </navbar>
+        <div class="search">
+          <input type="text" value="https://Denyaha's Portflio" readonly />
+          <button id="refreshPage">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0,0,256,256"
+            >
+              <g
+                fill-opacity="0.50196"
+                fill="#000000"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                style="mix-blend-mode: normal"
+              >
+                <g transform="scale(10.66667,10.66667)">
+                  <path
+                    d="M7.59375,3l1.46875,2h3.9375c3.32422,0 6,2.67578 6,6v4h-3l4,5.46875l4,-5.46875h-3v-4c0,-4.40625 -3.59375,-8 -8,-8zM4,3.53125l-4,5.46875h3v4c0,4.40625 3.59375,8 8,8h5.40625l-1.46875,-2h-3.9375c-3.32422,0 -6,-2.67578 -6,-6v-4h3z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="welcome-section">
+        <h1 class="anim">
+          Hey! I'm Denyaha,<br />
+          a frontend developer.
+        </h1>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <h2 class="anim">About me.</h2>
+          <div class="aboutGrid">
+            <div class="photos anim">
+              <img
+                class="photo"
+                src="https://i.postimg.cc/VvrJHr3L/photo-1-2024-11-05-22-13-56.jpg"
+                alt="Me"
+              />
+              <img
+                class="photo"
+                src="https://i.postimg.cc/WzBdRpvm/photo-2-2024-11-05-22-13-56.jpg"
+                alt="Me"
+              />
+              <img
+                class="photo"
+                src="https://i.postimg.cc/3NXBWxZ1/photo-2023-11-10-20-10-51.jpg"
+                alt="Me"
+              />
+              <img
+                class="bigPhoto photo"
+                src="https://i.postimg.cc/wTNtXNXw/photo-4-2024-11-05-22-13-56.jpg"
+                alt="Me"
+              />
+            </div>
+            <div class="aboutTextColumn anim">
+              <h3>About Me.</h3>
+              <p>
+                My name is Deleu Denis, I am 22 years old. I was born in Moldova
+                but moved to Russia when I was one year old. I didn’t attend
+                kindergarten, and at eight, I started first grade. However, in
+                the middle of the school year, we had to move back to Moldova
+                due to family circumstances, where I completed my schooling. At
+                15 or 16, I was introduced to programming, specifically the C++
+                language. At the time, it seemed incredibly difficult, but I
+                kept learning. However, at 16, I had to move back to Russia,
+                where I worked part-time at a car wash and didn’t have the
+                opportunity to pursue programming. Until the age of 22, I worked
+                in various jobs, such as a barista, waiter, and others. I
+                searched for my path, trying new things and exploring different
+                fields. Each time, I found myself returning to programming and
+                realized it was truly what I needed. So, I decided to pursue it
+                as seriously as possible.
+              </p>
+            </div>
+            <div class="aboutTextColumn anim">
+              <h3>Programming and Design.</h3>
+              <p>
+                I really love programming and spend time learning it almost
+                every day, always aiming to be better than I was yesterday. I
+                can see my skills improving, and I’m not planning to stop. I’m
+                also working on developing my design skills, as I believe design
+                is an important part of life. We encounter design everywhere,
+                every day. My style might not appeal to everyone, but I’m still
+                learning, and everyone has different tastes - so I appreciate
+                your understanding.
+              </p>
+              <h3>Hobbies.</h3>
+              <p>
+                When I’m not programming, I enjoy playing video games. I get
+                more pleasure from online games than offline ones, so feel free
+                to invite me to play League of Legends (D◡D). In the evenings, I
+                like to watch movies and series with my wife. I also love going
+                for walks, either alone or with someone. When I walk alone, I
+                enjoy listening to music.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <h2 class="anim">Projects.</h2>
+          <button id="refreshProjects">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="40"
+              height="40"
+              viewBox="0,0,256,256"
+            >
+              <g
+                fill-opacity="0.50196"
+                fill="#00000080"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                style="mix-blend-mode: normal"
+              >
+                <g transform="scale(10.66667,10.66667)">
+                  <path
+                    d="M7.59375,3l1.46875,2h3.9375c3.32422,0 6,2.67578 6,6v4h-3l4,5.46875l4,-5.46875h-3v-4c0,-4.40625 -3.59375,-8 -8,-8zM4,3.53125l-4,5.46875h3v4c0,4.40625 3.59375,8 8,8h5.40625l-1.46875,-2h-3.9375c-3.32422,0 -6,-2.67578 -6,-6v-4h3z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </button>
+          <div class="projectsCards anim swiper">
+            <div class="swiper-wrapper">
+              <div class="projectsCard project-tile swiper-slide">
+                <div class="windowControl">
+                  <button class="closeWindow closeCardBtn" type="button">
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        x1="5"
+                        y1="5"
+                        x2="10"
+                        y2="10"
+                        stroke="#A8443B"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                      <line
+                        x1="5"
+                        y1="10"
+                        x2="10"
+                        y2="5"
+                        stroke="#A8443B"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </button>
+                  <button class="collapseWindow collapseCardBtn" type="button">
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        x1="4"
+                        y1="7.5"
+                        x2="11"
+                        y2="7.5"
+                        stroke="#a67a1c"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </button>
+                  <a
+                    href="https://denyahas.github.io/Portfolio/Gladiator/"
+                    target="_blank"
+                    ><button class="expandWindow" type="button">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="9"
+                        height="9"
+                        viewBox="0 0 9 9"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.88008 0.0387714C3.68981 -0.0400364 3.4708 0.00352745 3.32518 0.149147L0.149087 3.32513C0.00346402 3.47075 -0.0400195 3.68975 0.0388004 3.88001C0.117518 4.07027 0.303265 4.19432 0.509174 4.19432H3.68523C3.96643 4.19432 4.1944 3.96636 4.1944 3.68516V0.509175C4.1944 0.30324 4.07034 0.117579 3.88008 0.0387714ZM8.85086 5.6749C8.99647 5.52929 9.04004 5.31029 8.96123 5.12003C8.88242 4.92977 8.69675 4.80571 8.49081 4.80571H5.31476C5.03354 4.80571 4.80559 5.03368 4.80559 5.31487V8.49086C4.80559 8.69677 4.92964 8.88241 5.1199 8.96123C5.31017 9.04005 5.52917 8.99646 5.6748 8.85084L8.85086 5.6749Z"
+                          fill="#3c8233"
+                        />
+                      </svg></button
+                  ></a>
+                </div>
+                <input
+                  class="projectName"
+                  type="text"
+                  value="https://Gladiator"
+                  readonly
+                />
+                <div class="returnTheProject hidden">
+                  <h4>Return the project?</h4>
+                  <button>Yes</button>
+                </div>
+                <a
+                  href="https://denyahas.github.io/Portfolio/Gladiator/"
+                  target="_blank"
+                >
+                  <img
+                    class="cardImg"
+                    src="https://i.postimg.cc/3wsN7LQH/Screenshot-1.png"
+                    alt="Gladiator"
+                  />
+                </a>
+              </div>
+
+              <div class="projectsCard project-tile swiper-slide">
+                <div class="windowControl">
+                  <button class="closeWindow closeCardBtn" type="button">
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        x1="5"
+                        y1="5"
+                        x2="10"
+                        y2="10"
+                        stroke="#A8443B"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                      <line
+                        x1="5"
+                        y1="10"
+                        x2="10"
+                        y2="5"
+                        stroke="#A8443B"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </button>
+                  <button class="collapseWindow collapseCardBtn" type="button">
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        x1="4"
+                        y1="7.5"
+                        x2="11"
+                        y2="7.5"
+                        stroke="#a67a1c"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </button>
+                  <a
+                    href="https://deleudenis.github.io/Portfolio/Estatein/"
+                    target="_blank"
+                    ><button class="expandWindow" type="button">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="9"
+                        height="9"
+                        viewBox="0 0 9 9"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.88008 0.0387714C3.68981 -0.0400364 3.4708 0.00352745 3.32518 0.149147L0.149087 3.32513C0.00346402 3.47075 -0.0400195 3.68975 0.0388004 3.88001C0.117518 4.07027 0.303265 4.19432 0.509174 4.19432H3.68523C3.96643 4.19432 4.1944 3.96636 4.1944 3.68516V0.509175C4.1944 0.30324 4.07034 0.117579 3.88008 0.0387714ZM8.85086 5.6749C8.99647 5.52929 9.04004 5.31029 8.96123 5.12003C8.88242 4.92977 8.69675 4.80571 8.49081 4.80571H5.31476C5.03354 4.80571 4.80559 5.03368 4.80559 5.31487V8.49086C4.80559 8.69677 4.92964 8.88241 5.1199 8.96123C5.31017 9.04005 5.52917 8.99646 5.6748 8.85084L8.85086 5.6749Z"
+                          fill="#3c8233"
+                        />
+                      </svg></button
+                  ></a>
+                </div>
+                <input
+                  class="projectName"
+                  type="text"
+                  value="https://Estatein"
+                  readonly
+                />
+                <div class="returnTheProject hidden">
+                  <h4>Return the project?</h4>
+                  <button>Yes</button>
+                </div>
+                <a
+                  href="https://deleudenis.github.io/Portfolio/Estatein/"
+                  target="_blank"
+                >
+                  <img
+                    class="cardImg"
+                    src="https://i.postimg.cc/bw1F3rYH/Screenshot-2.png"
+                    alt="Estatein"
+                  />
+                </a>
+              </div>
+
+              <div class="projectsCard project-tile swiper-slide">
+                <div class="windowControl">
+                  <button class="closeWindow closeCardBtn" type="button">
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        x1="5"
+                        y1="5"
+                        x2="10"
+                        y2="10"
+                        stroke="#A8443B"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                      <line
+                        x1="5"
+                        y1="10"
+                        x2="10"
+                        y2="5"
+                        stroke="#A8443B"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </button>
+                  <button class="collapseWindow collapseCardBtn" type="button">
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        x1="4"
+                        y1="7.5"
+                        x2="11"
+                        y2="7.5"
+                        stroke="#a67a1c"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </button>
+                  <a
+                    href="https://deleudenis.github.io/Portfolio/Nexcent/"
+                    target="_blank"
+                    ><button class="expandWindow" type="button">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="9"
+                        height="9"
+                        viewBox="0 0 9 9"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.88008 0.0387714C3.68981 -0.0400364 3.4708 0.00352745 3.32518 0.149147L0.149087 3.32513C0.00346402 3.47075 -0.0400195 3.68975 0.0388004 3.88001C0.117518 4.07027 0.303265 4.19432 0.509174 4.19432H3.68523C3.96643 4.19432 4.1944 3.96636 4.1944 3.68516V0.509175C4.1944 0.30324 4.07034 0.117579 3.88008 0.0387714ZM8.85086 5.6749C8.99647 5.52929 9.04004 5.31029 8.96123 5.12003C8.88242 4.92977 8.69675 4.80571 8.49081 4.80571H5.31476C5.03354 4.80571 4.80559 5.03368 4.80559 5.31487V8.49086C4.80559 8.69677 4.92964 8.88241 5.1199 8.96123C5.31017 9.04005 5.52917 8.99646 5.6748 8.85084L8.85086 5.6749Z"
+                          fill="#3c8233"
+                        />
+                      </svg></button
+                  ></a>
+                </div>
+                <input
+                  class="projectName"
+                  type="text"
+                  value="https://Nexcent"
+                  readonly
+                />
+                <div class="returnTheProject hidden">
+                  <h4>Return the project?</h4>
+                  <button>Yes</button>
+                </div>
+                <a
+                  href="https://deleudenis.github.io/Portfolio/Nexcent/"
+                  target="_blank"
+                >
+                  <img
+                    class="cardImg"
+                    src="https://i.postimg.cc/zBQjJYXG/Screenshot-3.png"
+                    alt="Nexcent"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <button class="prevCard anim">&lt;</button>
+          <button class="nextCard anim">&gt;</button>
+        </div>
+      </section>
+
+      <section id="contacts">
+        <div class="container">
+          <h2 class="anim">Contacts.</h2>
+          <div class="contactsGrid">
+            <div class="contactsLinks anim">
+              <a
+                href="https://t.me/Denyahas"
+                class="profile-link"
+                target="_blank"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="70"
+                  height="70"
+                  viewBox="0 0 70 70"
+                  fill="none"
+                >
+                  <path
+                    d="M35 3.18188C17.4277 3.18188 3.18182 17.4278 3.18182 35.0001C3.18182 52.5724 17.4277 66.8182 35 66.8182C52.5723 66.8182 66.8182 52.5724 66.8182 35.0001C66.8182 17.4278 52.5723 3.18188 35 3.18188ZM35 8.96701C49.3775 8.96701 61.0331 20.6226 61.0331 35.0001C61.0331 49.3775 49.3775 61.0331 35 61.0331C20.6225 61.0331 8.96694 49.3775 8.96694 35.0001C8.96694 20.6226 20.6225 8.96701 35 8.96701ZM48.0759 22.4722C47.3412 22.3875 46.4182 22.5888 45.3867 22.9609C43.5022 23.6407 19.4145 33.869 18.0232 34.4605C16.7056 35.0217 15.4569 35.6333 15.4554 36.517C15.4554 37.1389 15.8242 37.4901 16.8424 37.8531C17.9011 38.232 20.5709 39.0392 22.1473 39.4745C23.6659 39.8925 25.3929 39.5281 26.3619 38.9265C27.3873 38.2887 39.2356 30.3611 40.0846 29.6669C40.9336 28.9727 41.6121 29.8639 40.9179 30.5595C40.2237 31.2552 32.0902 39.1438 31.0171 40.2372C29.7154 41.5649 30.6407 42.9403 31.5142 43.4913C32.5107 44.1205 39.685 48.9307 40.7653 49.703C41.8457 50.4753 42.9395 50.8244 43.9432 50.8244C44.9469 50.8244 45.4753 49.5016 45.9742 47.9686C46.56 46.1737 49.3038 28.2779 49.6408 24.7518C49.7435 23.683 49.4063 22.9726 48.7453 22.6558C48.5454 22.56 48.3207 22.5005 48.0759 22.4722Z"
+                    fill="#FFA8AA"
+                    stroke="#00000080"
+                  />
+                </svg>
+                <span>Telegram</span></a
+              >
+              <a
+                href="https://github.com/Denyahas"
+                class="profile-link"
+                id="profile-link"
+                target="_blank"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="70"
+                  height="70"
+                  viewBox="0 0 70 70"
+                  fill="none"
+                >
+                  <path
+                    d="M35 3.18188C17.4284 3.18188 3.18182 17.6516 3.18182 35.4983C3.18182 50.6412 13.4485 63.3119 27.2894 66.8182C27.1409 66.382 27.0455 65.8757 27.0455 65.2482V59.7248C25.7542 59.7248 23.5905 59.7248 23.047 59.7248C20.8701 59.7248 18.9345 58.7742 17.9958 57.0075C16.9538 55.0443 16.7735 52.0416 14.1909 50.2049C13.4246 49.5936 14.008 48.8961 14.8909 48.9904C16.5216 49.459 17.8739 50.5954 19.1466 52.2813C20.414 53.9698 21.0106 54.3522 23.3784 54.3522C24.5265 54.3522 26.2447 54.2849 27.8621 54.0263C28.7318 51.783 30.2352 49.7175 32.0727 48.7426C21.4773 47.6358 16.4208 42.282 16.4208 35.0135C16.4208 31.8842 17.7333 28.8573 19.9633 26.307C19.2314 23.7755 18.3114 18.613 20.2443 16.647C25.0117 16.647 27.8939 19.7871 28.586 20.6354C30.9617 19.8087 33.5708 19.3401 36.3125 19.3401C39.0595 19.3401 41.6792 19.8087 44.0602 20.6408C44.7443 19.7979 47.6292 16.647 52.4072 16.647C54.3481 18.6157 53.4174 23.7997 52.6777 26.3258C54.8943 28.8707 56.1989 31.8896 56.1989 35.0135C56.1989 42.2766 51.1504 47.6277 40.5708 48.7399C43.4822 50.283 45.6061 54.6188 45.6061 57.8855V65.2482C45.6061 65.5283 45.5451 65.7303 45.5133 65.9699C57.9117 61.5561 66.8182 49.599 66.8182 35.4983C66.8182 17.6516 52.5716 3.18188 35 3.18188Z"
+                    fill="#FFA8AA"
+                    stroke="#00000080"
+                  />
+                </svg>
+                <span>Github</span></a
+              >
+              <a
+                href="https://www.freecodecamp.org/Denyaha"
+                class="profile-link"
+                target="_blank"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="70"
+                  height="70"
+                  viewBox="0 0 70 70"
+                  fill="none"
+                >
+                  <path
+                    d="M15.0306 13.6871C15.2447 13.9002 15.4587 14.2072 15.4597 14.516C15.4606 15.0498 14.8338 15.7741 13.6751 16.9638C8.84343 21.616 6.41301 27.3131 6.42941 34.1844C6.44763 41.7862 9.00376 47.8914 13.9721 52.6229C15.0169 53.5566 15.446 54.2909 15.4478 54.9194C15.4478 55.2273 15.2356 55.548 15.0224 55.8568C14.822 56.0709 14.3948 56.2858 14.0869 56.2858C12.9372 56.2886 11.3285 54.9294 9.22785 52.2849C5.13768 47.272 3.28845 41.7361 3.1846 34.1916C3.08895 26.6435 5.4556 21.5249 10.0878 16.2405C11.7548 14.3521 13.1449 13.371 14.0932 13.3691C14.4011 13.3682 14.7218 13.4739 15.0306 13.6871Z"
+                    fill="#FFA8AA"
+                    stroke="#00000080"
+                  />
+                  <path
+                    d="M40.4088 35.5444C38.5932 35.0807 46.043 26.2791 32.8023 15.7412C32.8023 15.7412 34.5395 21.2607 25.7798 33.5776C17.0156 45.89 29.6769 53.225 29.6769 53.225C29.6769 53.225 23.7347 50.0585 30.6425 38.7846C31.8786 36.7395 33.4965 34.8876 35.5051 30.7191C35.5051 30.7191 37.2833 33.2287 36.355 38.6698C34.9668 46.8921 42.3755 44.5391 42.4903 44.6539C45.0783 47.701 40.3468 53.0565 40.059 53.225C39.772 53.389 53.5711 44.9244 43.7674 32.1857C43.0961 32.8571 42.2234 36.0089 40.4088 35.5444Z"
+                    fill="#FFA8AA"
+                    stroke="#00000080"
+                  />
+                  <path
+                    d="M54.9694 13.6815C54.7553 13.8946 54.5412 14.2016 54.5403 14.5104C54.5394 15.0442 55.1662 15.7684 56.3249 16.9581C61.1566 21.6095 63.587 27.3074 63.5706 34.1787C63.5524 41.7806 60.9962 47.8858 56.0279 52.6173C54.9831 53.551 54.554 54.2852 54.5522 54.9138C54.5522 55.2217 54.7644 55.5424 54.9776 55.8512C55.178 56.0652 55.6052 56.2793 55.9131 56.2802C57.0628 56.283 58.6715 54.9238 60.7721 52.2793C64.8623 47.2664 66.7115 41.7305 66.8154 34.186C66.911 26.6379 64.5444 21.5193 59.9122 16.2348C58.2452 14.3464 56.8551 13.3654 55.9068 13.3635C55.5989 13.3626 55.2782 13.4683 54.9694 13.6815Z"
+                    fill="#FFA8AA"
+                    stroke="#00000080"
+                  />
+                </svg>
+                <span>FreeCodeCamp</span></a
+              >
+            </div>
+            <form
+              class="contactsForm anim"
+              action="https://api.web3forms.com/submit"
+              method="post"
+            >
+              <h3>Write to me.</h3>
+              <input
+                type="hidden"
+                name="access_key"
+                value="532229d8-cb3b-4d55-a0b6-3b93d339be31"
+              />
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+              <label for="message">Message:</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="4"
+                rows="3"
+                required
+              ></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="copyright">© 2024 Denyaha. All rights reserved.</p>
+    </footer>
+
+    <div class="popUps none">
+      <div class="popUpsCloseWindow none">
+        <p>Are you sure you want <br />to close this page?</p>
+        <div class="closeWindowButtons">
+          <button class="closeWindowYes">Yes</button>
+          <button class="closeWindowNo">No</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      // Скрытие header
+      let lastScrollY = window.scrollY;
+      let inactivityTimer;
+      const header = document.querySelector("header");
+      let isHeaderHiddenByButton = false;
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > lastScrollY) {
+          // Если прокручиваем вниз, скрываем
+          header.classList.add("hideHeader");
+        }
+        lastScrollY = window.scrollY;
+
+        //Если находимся вверху страницы, то не скрываем
+        if (window.scrollY === 0) {
+          header.classList.remove("hideHeader");
+          clearTimeout(inactivityTimer);
+        }
+      });
+
+      //Если хедер бездействует 1 секунду - скрываем его.
+      function hideHeader() {
+        header.classList.add("hideHeader");
+      }
+
+      function resetInactivityTimer() {
+        header.classList.remove("hideHeader");
+        clearTimeout(inactivityTimer);
+        inactivityTimer = setTimeout(hideHeader, 1000);
+      }
+
+      window.addEventListener("mousemove", (event) => {
+        if (
+          event.clientY < 100 &&
+          window.scrollY > 0 &&
+          !isHeaderHiddenByButton
+        ) {
+          resetInactivityTimer();
+        }
+      });
+
+      //Отключение секций в навигации
+      const closeAbout = document.getElementById("closeAbout");
+      const closeProjects = document.getElementById("closeProjects");
+      const closeContacts = document.getElementById("closeContacts");
+
+      const about = document.getElementById("about");
+      const projects = document.getElementById("projects");
+      const contacts = document.getElementById("contacts");
+
+      const aboutLink = document.querySelector('a[href="#about"]');
+      const projectsLink = document.querySelector('a[href="#projects"]');
+      const contactsLink = document.querySelector('a[href="#contacts"]');
+
+      closeAbout.addEventListener("click", () => {
+        about.classList.add("none");
+        aboutLink.classList.add("none");
+        closeAbout.classList.add("none");
+        document
+          .querySelector('a[href="#about"]')
+          .closest("li").style.marginRight = "0";
+      });
+
+      closeProjects.addEventListener("click", () => {
+        projects.classList.add("none");
+        projectsLink.classList.add("none");
+        closeProjects.classList.add("none");
+        document
+          .querySelector('a[href="#projects"]')
+          .closest("li").style.marginRight = "0";
+      });
+
+      closeContacts.addEventListener("click", () => {
+        contacts.classList.add("none");
+        contactsLink.classList.add("hidden");
+        closeContacts.classList.add("hidden");
+        document.querySelector("footer").classList.add("none");
+      });
+
+      //Обновление всех секций
+      const refreshPage = document.getElementById("refreshPage");
+      refreshPage.addEventListener("click", function () {
+        about.classList.remove("none");
+        aboutLink.classList.remove("none");
+        closeAbout.classList.remove("none");
+        document
+          .querySelector('a[href="#about"]')
+          .closest("li").style.marginRight = "10px";
+        projects.classList.remove("none");
+        projectsLink.classList.remove("none");
+        closeProjects.classList.remove("none");
+        document
+          .querySelector('a[href="#projects"]')
+          .closest("li").style.marginRight = "10px";
+        contacts.classList.remove("none");
+        contactsLink.classList.remove("hidden");
+        closeContacts.classList.remove("hidden");
+        document.querySelector("footer").classList.remove("none");
+
+        closeCardBtns.forEach((btn) => {
+          btn.closest(".project-tile").classList.remove("none");
+          swiper.update(); // обновление свайпера после скрытия карточки
+        });
+      });
+
+      //Обновление проектов
+      const refreshProjects = document.getElementById("refreshProjects");
+      refreshProjects.addEventListener("click", function () {
+        closeCardBtns.forEach((btn) => {
+          btn.closest(".project-tile").classList.remove("none");
+          swiper.update(); // обновление свайпера после скрытия карточки
+        });
+      });
+
+      //Кнопка сворачивания header
+      document
+        .getElementById("collapseWindowBtn")
+        .addEventListener("click", function () {
+          isHeaderHiddenByButton = true;
+          header.classList.add("hideHeader");
+          setTimeout(function () {
+            isHeaderHiddenByButton = false;
+          }, 1500);
+        });
+
+      //Кнопка закрытия header
+      const popUpsBg = document.querySelector(".popUps");
+      const popUpsCloseWindow = document.querySelector(".popUpsCloseWindow");
+      const closeWindowYes = document.querySelector(".closeWindowYes");
+      let firstClick = false;
+
+      function moveButton() {
+        const popUpsCloseWindowRect = popUpsCloseWindow.getBoundingClientRect();
+
+        // Получаем размеры кнопки
+        const buttonWidth = closeWindowYes.offsetWidth;
+        const buttonHeight = closeWindowYes.offsetHeight;
+
+        // Получаем максимально возможные координаты для кнопки, чтобы она не выходила за пределы блока
+        const maxX = popUpsCloseWindowRect.width - buttonWidth;
+        const maxY = popUpsCloseWindowRect.height - buttonHeight;
+
+        // Генерируем случайные координаты в пределах поп-апа и отнимаем высоту текста
+        let newX = Math.random() * maxX;
+        let newY = Math.random() * maxY - 90;
+
+        // Ограничиваем координаты, чтобы кнопка не выходила за пределы блока
+        newX = Math.min(Math.max(newX, 0), maxX);
+        newY = Math.min(Math.max(newY, 0), maxY);
+
+        // Применяем новые координаты для кнопки
+        closeWindowYes.style.transform = `translateX(0px)`;
+        closeWindowYes.style.left = `${newX}px`;
+        closeWindowYes.style.bottom = `${newY}px`;
+      }
+      function buttonInitialState() {
+        closeWindowYes.style.transform = `translateX(-100%) translateX(-5px)`;
+        closeWindowYes.style.left = `${50}%`;
+        closeWindowYes.style.bottom = `${10}px`;
+        closeWindowYes.style.backgroundColor = `#ed6a5f`;
+        closeWindowYes.textContent = `Yes`;
+        firstClick = false;
+      }
+
+      document
+        .getElementById("closeWindowBtn")
+        .addEventListener("click", function () {
+          popUpsBg.classList.remove("none");
+          popUpsCloseWindow.classList.remove("none");
+          document.documentElement.classList.add("noScroll");
+        });
+
+      document
+        .querySelector(".closeWindowNo")
+        .addEventListener("click", function () {
+          popUpsBg.classList.add("none");
+          popUpsCloseWindow.classList.add("none");
+          document.documentElement.classList.remove("noScroll");
+          buttonInitialState();
+        });
+
+      closeWindowYes.addEventListener("mouseover", function () {
+        if (firstClick) {
+          closeWindowYes.style.backgroundColor = `#71e462`;
+        }
+      });
+
+      closeWindowYes.addEventListener("mouseleave", function () {
+        if (firstClick) {
+          closeWindowYes.style.backgroundColor = `#62c554`;
+        }
+      });
+
+      closeWindowYes.addEventListener("mouseover", moveButton);
+      closeWindowYes.addEventListener("click", function () {
+        if (!firstClick) {
+          firstClick = true;
+          closeWindowYes.style.backgroundColor = `#62c554`;
+          closeWindowYes.textContent = `No`;
+          closeWindowYes.removeEventListener("mouseover", moveButton);
+          closeWindowYes.style.transform = `translateX(-100%) translateX(-5px)`;
+          closeWindowYes.style.left = `${50}%`;
+          closeWindowYes.style.bottom = `${10}px`;
+        } else {
+          popUpsBg.classList.add("none");
+          popUpsCloseWindow.classList.add("none");
+          document.documentElement.classList.remove("noScroll");
+          buttonInitialState();
+          closeWindowYes.addEventListener("mouseover", moveButton);
+        }
+      });
+
+      //Кнопка полноэкранного режима header
+      document
+        .getElementById("fullScreenBtn")
+        .addEventListener("click", function () {
+          if (document.fullscreenElement) {
+            // Если уже в полноэкранном режиме, выходим из него
+            if (document.exitFullscreen) {
+              document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+              // Для Firefox
+              document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+              // Для Chrome, Safari, Opera
+              document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+              // Для IE/Edge
+              document.msExitFullscreen();
+            }
+          } else {
+            // Если не в полноэкранном режиме, переходим в него
+            if (document.documentElement.requestFullscreen) {
+              document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) {
+              // Для Firefox
+              document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+              // Для Chrome, Safari, Opera
+              document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) {
+              // Для IE/Edge
+              document.documentElement.msRequestFullscreen();
+            }
+          }
+        });
+
+      // Обработчик фото
+      const photos = document.querySelectorAll(".photo");
+      photos.forEach((photo) => {
+        photo.addEventListener("click", function () {
+          photos.forEach((img) => img.classList.remove("bigPhoto"));
+          photo.classList.add("bigPhoto");
+        });
+      });
+
+      //Закрытие окна проекта
+
+      const closeCardBtns = document.querySelectorAll(".closeCardBtn");
+
+      closeCardBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          btn.closest(".project-tile").classList.add("none");
+          swiper.update(); // обновление свайпера после скрытия карточки
+        });
+      });
+
+      //Сворачивание окна проекта
+      const collapseCardBtns = document.querySelectorAll(".collapseCardBtn");
+
+      collapseCardBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const card = btn.closest(".project-tile");
+          const returnProject = card.querySelector(".returnTheProject"); // Каждый блок returnProject для каждой карточки
+          const cardImg = card.querySelector(".cardImg");
+          const returnProjectBtn = returnProject.querySelector("button"); // Кнопка внутри текущей карточки
+
+          const isOpen = card.classList.contains("open");
+
+          if (!isOpen) {
+            // Если карточка закрыта, открываем её
+            if (cardImg) {
+              cardImg.style.opacity = "0";
+              cardImg.style.transform = "scale(0)";
+              returnProject.classList.remove("hidden");
+            }
+            card.classList.add("open");
+
+            // Обработчик для кнопки возврата
+            returnProjectBtn.addEventListener("click", function () {
+              cardImg.style.opacity = "1";
+              cardImg.style.transform = "scale(1)";
+              card.classList.remove("open");
+              returnProject.classList.add("hidden");
+            });
+          } else {
+            // Если карточка уже открыта, сворачиваем её
+            cardImg.style.opacity = "1";
+            cardImg.style.transform = "scale(1)";
+            card.classList.remove("open");
+            returnProject.classList.add("hidden");
+          }
+        });
+      });
+
+      //Swiper
+      const swiper = new Swiper(".swiper", {
+        direction: "horizontal",
+        loop: false,
+        spaceBetween: 10,
+        speed: 700,
+
+        navigation: {
+          nextEl: ".nextCard",
+          prevEl: ".prevCard",
+        },
+
+        breakpoints: {
+          768: {
+            spaceBetween: 20, // Отступы увеличиваются для ширины от 768px и больше
+          },
+        },
+      });
+
+      //Animation
+      const the_animation = document.querySelectorAll(".anim");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("scrollAnim");
+          }
+        });
+      });
+      //
+      for (let i = 0; i < the_animation.length; i++) {
+        const elements = the_animation[i];
+
+        observer.observe(elements);
+      }
+    </script>
+  </body>
+</html>

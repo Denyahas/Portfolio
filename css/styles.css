@@ -1,0 +1,1046 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+::selection {
+  background-color: #a8c4ffcc;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #00000080;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00000080;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #000000;
+}
+
+:root {
+  --border: 1px solid #00000080; /*Black 50% opacity*/
+  --borderRadius: 10px;
+  --textBlack: #000;
+  --shortTransition: all 0.1s ease;
+  --middleTransition: all 0.5s ease;
+  --longTransition: all 1s ease;
+  --superLongTransition: all 1.5s ease;
+  --textShadow: -1px -1px 0 #00000080, 1px -1px 0 #00000080,
+    -1px 1px 0 #00000080, 1px 1px 0 #00000080;
+}
+
+.noScroll {
+  overflow: hidden !important;
+}
+
+.none {
+  display: none !important;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+main {
+  transition: all 1s ease;
+}
+
+.container {
+  max-width: 1680px;
+  padding: 0 120px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.hideHeader {
+  top: -200px;
+}
+
+.closeWindow,
+.collapseWindow,
+.expandWindow {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.closeWindow svg,
+.collapseWindow svg,
+.expandWindow svg {
+  opacity: 0;
+  transition: var(--shortTransition);
+}
+
+.closeWindow:hover svg,
+.collapseWindow:hover svg,
+.expandWindow:hover svg {
+  opacity: 1;
+}
+
+.closeWindow {
+  border: 1px solid #a8443b;
+  background-color: #ed6a5f;
+}
+
+.collapseWindow {
+  border: 1px solid #a67a1c;
+  background-color: #f4bf4f;
+}
+
+.expandWindow {
+  border: 1px solid #3c8233;
+  background-color: #62c554;
+}
+
+.windowControl {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 55px;
+  gap: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+header {
+  width: 100%;
+  height: 101px;
+  background-color: #ffb686;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  transition: var(--middleTransition);
+  transform: translateY(-50%);
+}
+
+header.scrollAnim {
+  transform: translateY(0%);
+}
+
+.navigationAndSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.navigationAndSearch ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.navigationAndSearch li {
+  position: relative;
+}
+
+.navigationAndSearch li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.navigationAndSearch a {
+  color: var(--textBlack);
+  text-decoration: none;
+  font-family: "The Girl Next Door", cursive;
+  font-size: 20px;
+  border-radius: 0px 0px 10px 10px;
+  border: var(--border);
+  border-top: none;
+  padding: 4px 40px 0;
+  transition: var(--shortTransition);
+}
+
+a[href="#about"] {
+  background-color: #b2ffcf;
+}
+
+.navigationAndSearch li:hover a[href="#about"] {
+  background-color: #7cffae;
+}
+
+a[href="#projects"] {
+  background-color: #a8c4ff;
+}
+
+.navigationAndSearch li:hover a[href="#projects"] {
+  background-color: #81a9ff;
+}
+
+a[href="#contacts"] {
+  background-color: #ffa8aa;
+}
+
+.navigationAndSearch li:hover a[href="#contacts"] {
+  background-color: #ff7e80;
+}
+
+.navigationAndSearch li button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--shortTransition);
+}
+
+.navigationAndSearch li button:hover {
+  border: 1px solid #a8443b;
+  background-color: #ed6a5f;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.navigationAndSearch input {
+  outline: none;
+  width: 1000px;
+  font-family: "The Girl Next Door", cursive;
+  font-size: 20px;
+  padding: 4px 10px 0;
+  border-radius: var(--borderRadius);
+  border: var(--border);
+  position: relative;
+}
+
+.search {
+  position: relative;
+}
+
+.search button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search button:hover path {
+  fill: #000000bb;
+}
+
+#welcome-section,
+#about,
+#projects,
+#contacts {
+  width: 100%;
+  height: 100vh;
+}
+
+#welcome-section {
+  background-color: #fffadd;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about {
+  background-color: #f6fff8;
+  position: relative;
+}
+
+#projects {
+  background-color: #e7ecff;
+}
+
+#contacts {
+  border-bottom: none;
+  background-color: #ffe7e7;
+}
+
+h1,
+h2 {
+  font-size: 128px;
+  font-family: "Just Me Again Down Here", serif;
+  line-height: 100%;
+  font-weight: 300;
+  text-shadow: var(--textShadow);
+}
+
+h1 {
+  color: #ffb686;
+  transform: scale(0%);
+  transition: var(--middleTransition);
+}
+
+h1.scrollAnim {
+  transform: scale(100%);
+}
+
+h2 {
+  padding-top: 50px;
+  position: absolute;
+  transform: translate(-50%);
+  transition: var(--longTransition);
+}
+
+h2.scrollAnim {
+  transform: translate(0%);
+}
+
+#about h2 {
+  color: #b2ffcf;
+}
+
+#projects h2 {
+  color: #a8c4ff;
+}
+
+#contacts h2 {
+  color: #ffa8aa;
+}
+
+.aboutGrid {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.photos {
+  grid-column: span 2;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  gap: 10px;
+  width: 763px;
+  height: 401px;
+  margin-right: 100px;
+  transform: scale(0%);
+  transition: var(--middleTransition);
+}
+
+.photos.scrollAnim {
+  transform: scale(100%);
+}
+
+.photos img {
+  width: 100%;
+  aspect-ratio: 128 / 89;
+  object-fit: cover;
+  border-radius: var(--borderRadius);
+  cursor: pointer;
+}
+
+.photos img.bigPhoto {
+  aspect-ratio: 407 / 287;
+  cursor: unset;
+}
+
+.photos .bigPhoto {
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 3;
+}
+
+.aboutTextColumn {
+  text-align: center;
+  font-family: "The Girl Next Door", cursive;
+  line-height: 20px;
+  height: 600px;
+  transform: translateX(50%);
+  transition: var(--superLongTransition);
+}
+
+.aboutTextColumn.scrollAnim {
+  transform: translateX(0);
+}
+
+.aboutTextColumn h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.aboutTextColumn p {
+  font-size: 18px;
+}
+
+.aboutTextColumn p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+#projects .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 75px;
+}
+
+#projects h2 {
+  top: 0;
+  left: 120px;
+}
+
+.projectsCards {
+  margin-top: 75px;
+  width: 75%;
+  position: relative;
+  transform: scale(0%);
+  transition: var(--longTransition);
+}
+
+.projectsCards.scrollAnim {
+  transform: scale(100%);
+}
+
+#projects .prevCard,
+#projects .nextCard {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Just Me Again Down Here", serif;
+  font-size: 300px;
+  color: #a8c4ff;
+  text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+  position: absolute;
+  line-height: 0;
+}
+
+#projects .prevCard:hover,
+#projects .nextCard:hover {
+  color: #b8cfff;
+}
+
+#projects .prevCard {
+  left: 50px;
+  margin-left: 120px;
+  top: 52%;
+  transform: translateX(-250%);
+  transition: var(--superLongTransition);
+}
+
+#projects .prevCard.scrollAnim {
+  transform: translateX(0%);
+}
+
+#projects .nextCard {
+  right: 50px;
+  margin-right: 120px;
+  top: 52%;
+  transform: translateX(250%);
+  transition: var(--superLongTransition);
+}
+
+#projects .nextCard.scrollAnim {
+  transform: translateX(0%);
+}
+
+#refreshProjects {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#refreshProjects:hover path {
+  fill: #000000bb;
+}
+.projectsCard {
+  position: relative;
+  padding: 20px;
+  padding-top: 31px;
+  background-color: #a8c4ff;
+  border-radius: var(--borderRadius);
+  border: var(--border);
+}
+
+.projectsCard input {
+  font-family: "The Girl Next Door", cursive;
+  font-size: 18px;
+  padding: 3px 10px 0;
+  width: calc(100% - 100px);
+  margin: 0 50px 10px;
+  outline: none;
+  border-radius: var(--borderRadius);
+  border: var(--border);
+}
+
+.cardImg {
+  width: 100%;
+  border-radius: var(--borderRadius);
+  border: var(--border);
+  transition: var(--middleTransition);
+}
+
+.returnTheProject {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-40%);
+  padding: 20px;
+  background-color: #ffa8aa;
+  border: var(--border);
+  border-radius: var(--borderRadius);
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  transition: var(--middleTransition);
+}
+
+.returnTheProject h4 {
+  font-family: "The Girl Next Door", cursive;
+  font-size: 22px;
+  font-weight: initial;
+}
+
+.returnTheProject button {
+  font-family: "The Girl Next Door", cursive;
+  font-size: 15px;
+  border: var(--border);
+  border-radius: var(--borderRadius);
+  padding: 3px 25px 0;
+  cursor: pointer;
+}
+
+.returnTheProject button {
+  background-color: #62c554;
+}
+
+.returnTheProject button:hover {
+  background-color: #71e462;
+}
+
+#contacts {
+  position: relative;
+}
+
+.contactsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.contactsLinks {
+  align-self: flex-end;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  transform: translateX(-50%);
+  transition: var(--superLongTransition);
+}
+
+.contactsLinks.scrollAnim {
+  transform: translateX(0%);
+}
+
+.contactsForm {
+  font-family: "The Girl Next Door", cursive;
+  background-color: #ffa8aa;
+  border-radius: var(--borderRadius);
+  border: var(--border);
+  padding: 30px 20px 20px;
+  min-width: 60%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: end;
+  transform: scale(0%);
+  transition: var(--longTransition);
+}
+
+.contactsForm.scrollAnim {
+  transform: scale(100%);
+}
+
+.contactsForm h3 {
+  font-size: 40px;
+  text-align: center;
+}
+
+label {
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+
+.contactsForm input,
+.contactsForm textarea,
+.contactsForm button[type="submit"] {
+  font-family: "The Girl Next Door", cursive;
+  font-size: 18px;
+  padding: 3px 10px 0;
+  border-radius: var(--borderRadius);
+  border: var(--border);
+  resize: none;
+  outline: none;
+}
+
+.contactsForm input:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.contactsForm button[type="submit"] {
+  margin-top: auto;
+  align-self: center;
+  color: #ffa8aa;
+  background-color: #000;
+  border-radius: var(--borderRadius);
+  border: none;
+  font-size: 36px;
+  line-height: 36px;
+  padding: 8px 25px 0;
+  max-width: 130px;
+  margin-top: 50px;
+  cursor: pointer;
+  transition: var(--shortTransition);
+}
+
+.contactsForm button[type="submit"]:hover {
+  transform: scale(95%);
+}
+
+.contactsLinks a {
+  color: #ffa8aa;
+  text-decoration: none;
+  font-family: "Just Me Again Down Here", serif;
+  font-size: 64px;
+  text-shadow: var(--textShadow);
+  display: flex;
+  line-height: 0;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  transition: var(--shortTransition);
+}
+
+.contactsLinks a:hover {
+  transform: translateX(20px);
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  font-family: "Just Me Again Down Here", serif;
+  color: #000;
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+  background-color: #ffa8aa;
+}
+
+.popUps {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #00000040;
+  z-index: 1000;
+}
+
+.popUps .popUpsCloseWindow {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffa8aa;
+  width: 30%;
+  height: 25%;
+  padding: 10px;
+  border: var(--border);
+  border-radius: var(--borderRadius);
+  font-family: "The Girl Next Door", cursive;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.popUps .closeWindowButtons button {
+  font-family: "The Girl Next Door", cursive;
+  font-size: 20px;
+  border: var(--border);
+  border-radius: var(--borderRadius);
+  padding: 3px 25px 0;
+  cursor: pointer;
+}
+
+.popUps .closeWindowButtons .closeWindowYes {
+  background-color: #ed6a5f;
+  transition: var(--shortTransition);
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-100%) translateX(-5px);
+  z-index: 1;
+}
+
+.popUps .closeWindowButtons .closeWindowNo {
+  background-color: #62c554;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(5px);
+}
+
+.popUps .closeWindowButtons .closeWindowNo:hover {
+  background-color: #71e462;
+}
+
+@media screen and (max-width: 1650px) {
+  #about {
+    height: auto;
+  }
+  .photos {
+    justify-self: center;
+    margin-right: 0;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 50px;
+    padding: 250px 0 50px;
+  }
+
+  .aboutTextColumn {
+    align-self: flex-start;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  #projects .prevCard {
+    left: 30px;
+  }
+
+  #projects .nextCard {
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .navigationAndSearch input {
+    width: 700px;
+  }
+  .projectsCards {
+    width: 90%;
+  }
+  #projects .prevCard {
+    left: -70px;
+    top: 52%;
+  }
+
+  #projects .nextCard {
+    right: -70px;
+    top: 52%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 60px;
+  }
+
+  #projects h2 {
+    left: 60px;
+  }
+
+  #projects .prevCard,
+  #projects .nextCard {
+    font-size: 200px;
+    top: 55%;
+  }
+
+  #projects .prevCard {
+    left: -90px;
+  }
+
+  #projects .nextCard {
+    right: -90px;
+  }
+
+  .contactsForm {
+    min-width: 80%;
+  }
+}
+@media screen and (max-width: 900px) {
+  h1,
+  h2 {
+    font-size: 100px;
+  }
+
+  .photos {
+    width: calc(763px / 1.2);
+    height: calc(401px / 1.2);
+  }
+
+  .navigationAndSearch input {
+    width: 550px;
+  }
+
+  #contacts {
+    height: auto;
+  }
+
+  .contactsGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding-top: 250px;
+    gap: 70px;
+  }
+
+  .contactsForm {
+    min-width: 60%;
+    justify-self: center;
+  }
+  .contactsLinks {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  #projects h2 {
+    left: 30px;
+  }
+
+  h1,
+  h2 {
+    font-size: 80px;
+  }
+
+  #welcome-section {
+    padding: 0 30px;
+  }
+
+  .navigationAndSearch a {
+    font-size: 16px;
+    padding: 4px 30px 0;
+  }
+
+  .navigationAndSearch input {
+    width: 400px;
+    font-size: 18px;
+  }
+
+  .photos {
+    width: 90%;
+    height: unset;
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+  }
+
+  .photos .bigPhoto {
+    grid-row: 1 / 1;
+    grid-column: 1 / span 3;
+    aspect-ratio: 16 / 9;
+  }
+
+  .aboutTextColumn h3 {
+    font-size: 20px;
+  }
+
+  .aboutTextColumn p {
+    font-size: 16px;
+  }
+
+  #projects .container {
+    padding-top: 0;
+  }
+
+  #projects {
+    height: 90vh;
+  }
+
+  .projectsCards {
+    width: 100%;
+  }
+
+  .projectsCard {
+    padding: 10px;
+    padding-top: 41px;
+  }
+
+  .projectsCard input {
+    font-size: 16px;
+  }
+
+  #projects .prevCard,
+  #projects .nextCard {
+    display: none;
+  }
+
+  .contactsLinks a {
+    font-size: 48px;
+  }
+
+  .popUps .popUpsCloseWindow {
+    width: 50%;
+    height: 25%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1,
+  h2 {
+    font-size: 64px;
+  }
+
+  header {
+    padding-left: 20%;
+    justify-content: start;
+    height: 80px;
+  }
+  .navigationAndSearch input {
+    width: 260px;
+    font-size: 16px;
+  }
+
+  .navigationAndSearch a {
+    padding: 3px 10px 0;
+    padding-right: 15px;
+    font-size: 14px;
+  }
+
+  .navigationAndSearch li button {
+    top: 0;
+    right: 1px;
+  }
+
+  .aboutGrid {
+    padding-top: 200px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 0;
+    row-gap: 20px;
+  }
+
+  .aboutTextColumn {
+    grid-column: 1 / 2;
+  }
+
+  .photos {
+    margin-bottom: 30px;
+  }
+
+  .contactsGrid {
+    padding-top: 200px;
+  }
+
+  .popUps .popUpsCloseWindow {
+    width: 80%;
+    height: 25%;
+  }
+
+  .returnTheProject {
+    transform: translateX(-50%) translateY(-30%);
+    text-wrap: nowrap;
+  }
+
+  .returnTheProject h4,
+  .returnTheProject button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  header {
+    padding-left: 0;
+    justify-content: center;
+    height: 120px;
+    padding-top: 40px;
+  }
+
+  #refreshProjects svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navigationAndSearch a {
+    border-top: var(--border);
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  #projects {
+    height: 60vh;
+  }
+
+  .projectsCard input {
+    width: 100%;
+    font-size: 14px;
+    margin: 0 0 10px;
+  }
+
+  .contactsForm {
+    padding: 20px 13px 20px;
+  }
+
+  .contactsLinks a {
+    font-size: 44px;
+  }
+  .contactsLinks a svg {
+    width: 50px;
+  }
+
+  .contactsLinks a svg path {
+    stroke: #000;
+  }
+
+  .contactsLinks a:hover {
+    transform: translateX(10px);
+  }
+
+  .returnTheProject {
+    transform: translateX(-50%) translateY(-25%);
+    padding: 10px;
+  }
+}
