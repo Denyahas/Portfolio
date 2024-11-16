@@ -7,6 +7,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Rocker&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="CSS/styles.css" />
     <title>Gladiator</title>
   </head>
@@ -20,6 +25,7 @@
           <ul>
             <li><a href="#about">О НАС</a></li>
             <li><a href="#price">ПРАЙС</a></li>
+            <li><a href="#gym">ТРЕНАЖЕРЫ</a></li>
             <li><a href="#trainers">ТРЕНЕРА</a></li>
             <li><a href="#app">ПРИЛОЖЕНИЕ</a></li>
           </ul>
@@ -97,6 +103,58 @@
         </div>
         <div class="freezeSubscription">
           *Есть возможность заморозить свой абонемент!
+        </div>
+      </section>
+
+      <section id="gym">
+        <h2>ТРЕНАЖЕРЫ</h2>
+        <div class="swiper gym-photos">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="Images/photo1.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo2.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo3.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo4.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo5.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo6.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo7.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo8.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo9.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo10.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo11.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo12.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo13.jpg" alt="gym photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="Images/photo14.jpg" alt="gym photo" />
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </section>
 
@@ -190,5 +248,41 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        direction: "horizontal",
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 3,
+        autoplay: true,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          576: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

@@ -24,7 +24,10 @@ header {
 
 .header-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  row-gap: 30px;
   margin-top: 30px;
   column-gap: 200px;
 }
@@ -196,6 +199,32 @@ h2 {
 
 .freezeSubscription {
   text-align: center;
+}
+
+#gym {
+  height: 100vh;
+  padding: 5vh 120px;
+}
+
+#gym h2 {
+  text-align: center;
+}
+
+.swiper {
+  margin-top: 30px;
+  height: 80vh;
+  cursor: grab;
+}
+
+.swiper:active {
+  cursor: grabbing;
+}
+
+.gym-photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 #trainers {
@@ -506,6 +535,10 @@ h2 {
     font-size: 35px;
   }
 
+  #gym {
+    padding: 5vh 50px;
+  }
+
   .trainersCards {
     grid-template: 1fr / 250px 250px;
     gap: 30px;
@@ -526,7 +559,7 @@ h2 {
     margin-right: 15px;
   }
   .navigation a {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .heroText {
@@ -556,6 +589,10 @@ h2 {
     max-width: 300px;
   }
 
+  #gym {
+    padding: 5vh 30px;
+  }
+
   .trainersCards {
     grid-template: 1fr / 300px;
   }
@@ -583,6 +620,25 @@ h2 {
   }
 }
 
+@media screen and (max-width: 425px) {
+  .navigation ul {
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    column-gap: 15px;
+    row-gap: 10px;
+    text-align: left;
+    text-align: center;
+  }
+
+  .navigation li:nth-child(5) {
+    grid-column: 1 / span 4;
+  }
+
+  .navigation li:not(:last-of-type) {
+    margin-right: 0;
+  }
+}
+
 @media screen and (max-width: 390px) {
   .heroText {
     width: 250px;
@@ -600,10 +656,6 @@ h2 {
   h1 {
     font-size: 40px;
     padding-top: 420px;
-  }
-
-  .navigation li:not(:last-of-type) {
-    margin-right: 15px;
   }
 
   .navigation a {
@@ -628,6 +680,10 @@ h2 {
 
   .card {
     max-width: 250px;
+  }
+
+  #gym {
+    padding: 50px 20px;
   }
 
   .trainersCards {
