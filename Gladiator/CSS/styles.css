@@ -203,7 +203,7 @@ h2 {
 
 #gym {
   height: 100vh;
-  padding: 5vh 120px;
+  padding: 50px 120px;
 }
 
 #gym h2 {
@@ -536,7 +536,7 @@ h2 {
   }
 
   #gym {
-    padding: 5vh 50px;
+    padding: 50px 50px;
   }
 
   .trainersCards {
@@ -590,7 +590,7 @@ h2 {
   }
 
   #gym {
-    padding: 5vh 30px;
+    padding: 50px 30px;
   }
 
   .trainersCards {
