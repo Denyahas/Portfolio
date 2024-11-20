@@ -167,6 +167,12 @@ h2 {
   font-weight: 500;
 }
 
+.cardText {
+  font-size: 10px;
+  position: absolute;
+  top: 95px;
+}
+
 .numberOfVisits {
   font-family: "New Rocker", system-ui;
   font-size: 200px;
@@ -392,6 +398,10 @@ h2 {
   .card,
   .card:nth-of-type(4) {
     padding: 29px 20px 7px;
+  }
+
+  .cardText {
+    top: 70px;
   }
 
   .numberOfVisits {
