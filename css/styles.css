@@ -268,6 +268,7 @@ a[href="#contacts"] {
 #contacts {
   width: 100%;
   height: 100vh;
+  min-height: 850px;
 }
 
 #welcome-section {
@@ -285,7 +286,6 @@ a[href="#contacts"] {
 
 #projects {
   background-color: #e7ecff;
-  min-height: 850px;
 }
 
 #contacts {
@@ -441,11 +441,19 @@ h2.scrollAnim {
     1px 1px 0 #000000;
   position: absolute;
   line-height: 0;
+  transition: var(--superLongTransition), text-shadow 0.4s ease;
 }
 
-#projects .prevCard:hover,
-#projects .nextCard:hover {
-  color: #b8cfff;
+#projects .prevCard:hover:not(:disabled),
+#projects .nextCard:hover:not(:disabled) {
+  text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -2px 2px 0 #000000,
+    2px 2px 0 #000000;
+}
+
+#projects .prevCard:disabled,
+#projects .nextCard:disabled {
+  cursor: default;
+  opacity: 0.4;
 }
 
 #projects .prevCard {
@@ -453,7 +461,6 @@ h2.scrollAnim {
   margin-left: 120px;
   top: 52%;
   transform: translateX(-250%);
-  transition: var(--superLongTransition);
 }
 
 #projects .prevCard.scrollAnim {
@@ -465,7 +472,6 @@ h2.scrollAnim {
   margin-right: 120px;
   top: 52%;
   transform: translateX(250%);
-  transition: var(--superLongTransition);
 }
 
 #projects .nextCard.scrollAnim {
