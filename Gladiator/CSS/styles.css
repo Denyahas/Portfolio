@@ -12,6 +12,19 @@ html {
 
 body {
   font-family: "Montserrat", serif;
+  position: relative;
+}
+
+.lang {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+}
+
+.lang a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .container {
@@ -263,6 +276,9 @@ h2 {
 .trainersCard a {
   color: #000;
   text-decoration: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .trainersCard:hover,
@@ -298,6 +314,7 @@ h2 {
   margin-left: -35px;
   text-align: center;
   margin-bottom: 15px;
+  margin-top: auto;
 }
 
 #app {
@@ -376,8 +393,16 @@ h2 {
     padding: 50px 75px 20px;
   }
 
+  .trainersCards {
+    gap: 40px;
+  }
+
   #trainers {
     padding: 50px 75px 50px;
+  }
+
+  .trainersCard {
+    min-width: 300px;
   }
 }
 
@@ -475,6 +500,10 @@ h2 {
   #app ul {
     margin-top: 170px;
   }
+
+  #app h2.kz {
+    font-size: 40px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -554,6 +583,10 @@ h2 {
     gap: 30px;
   }
 
+  .trainersCard {
+    min-width: auto;
+  }
+
   .name {
     top: 37%;
   }
@@ -603,6 +636,10 @@ h2 {
     padding: 50px 30px;
   }
 
+  #trainers {
+    padding: 50px 0 50px;
+  }
+
   .trainersCards {
     grid-template: 1fr / 300px;
   }
@@ -611,7 +648,8 @@ h2 {
     max-width: 300px;
   }
 
-  #app h2 {
+  #app h2,
+  #app h2.kz {
     font-size: 30px;
   }
 
@@ -646,6 +684,11 @@ h2 {
 
   .navigation li:not(:last-of-type) {
     margin-right: 0;
+  }
+
+  #app h2.kz {
+    font-size: 20px;
+    padding: 0 20px;
   }
 }
 
