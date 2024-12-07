@@ -684,6 +684,7 @@ footer {
   left: 0;
   background-color: #00000040;
   z-index: 1000;
+  user-select: none;
 }
 
 .popUps .popUpsCloseWindow {
