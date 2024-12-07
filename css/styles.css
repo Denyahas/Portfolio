@@ -725,6 +725,10 @@ footer {
   z-index: 1;
 }
 
+.popUps .closeWindowButtons .closeWindowYes:hover {
+  background-color: #fd776b;
+}
+
 .popUps .closeWindowButtons .closeWindowNo {
   background-color: #62c554;
   position: absolute;
@@ -785,6 +789,10 @@ footer {
     right: -70px;
     top: 52%;
   }
+
+  .popUps .popUpsCloseWindow {
+    width: 35%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -812,6 +820,11 @@ footer {
 
   .contactsForm {
     min-width: 80%;
+  }
+
+  .popUps .popUpsCloseWindow {
+    width: 40%;
+    height: 27%;
   }
 }
 @media screen and (max-width: 900px) {
@@ -929,7 +942,6 @@ footer {
 
   .popUps .popUpsCloseWindow {
     width: 50%;
-    height: 25%;
   }
 }
 
@@ -982,7 +994,6 @@ footer {
 
   .popUps .popUpsCloseWindow {
     width: 80%;
-    height: 25%;
   }
 
   .returnTheProject {

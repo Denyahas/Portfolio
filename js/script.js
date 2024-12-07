@@ -121,7 +121,6 @@ document
 const popUpsBg = document.querySelector(".popUps");
 const popUpsCloseWindow = document.querySelector(".popUpsCloseWindow");
 const closeWindowYes = document.querySelector(".closeWindowYes");
-let firstClick = false;
 
 function moveButton() {
   const popUpsCloseWindowRect = popUpsCloseWindow.getBoundingClientRect();
@@ -147,13 +146,11 @@ function moveButton() {
   closeWindowYes.style.left = `${newX}px`;
   closeWindowYes.style.bottom = `${newY}px`;
 }
+
 function buttonInitialState() {
   closeWindowYes.style.transform = `translateX(-100%) translateX(-5px)`;
   closeWindowYes.style.left = `${50}%`;
   closeWindowYes.style.bottom = `${10}px`;
-  closeWindowYes.style.backgroundColor = `#ed6a5f`;
-  closeWindowYes.textContent = `Yes`;
-  firstClick = false;
 }
 
 document
@@ -171,36 +168,7 @@ document.querySelector(".closeWindowNo").addEventListener("click", function () {
   buttonInitialState();
 });
 
-closeWindowYes.addEventListener("mouseover", function () {
-  if (firstClick) {
-    closeWindowYes.style.backgroundColor = `#71e462`;
-  }
-});
-
-closeWindowYes.addEventListener("mouseleave", function () {
-  if (firstClick) {
-    closeWindowYes.style.backgroundColor = `#62c554`;
-  }
-});
-
-closeWindowYes.addEventListener("mouseover", moveButton);
-closeWindowYes.addEventListener("click", function () {
-  if (!firstClick) {
-    firstClick = true;
-    closeWindowYes.style.backgroundColor = `#62c554`;
-    closeWindowYes.textContent = `No`;
-    closeWindowYes.removeEventListener("mouseover", moveButton);
-    closeWindowYes.style.transform = `translateX(-100%) translateX(-5px)`;
-    closeWindowYes.style.left = `${50}%`;
-    closeWindowYes.style.bottom = `${10}px`;
-  } else {
-    popUpsBg.classList.add("none");
-    popUpsCloseWindow.classList.add("none");
-    document.documentElement.classList.remove("noScroll");
-    buttonInitialState();
-    closeWindowYes.addEventListener("mouseover", moveButton);
-  }
-});
+closeWindowYes.addEventListener("click", moveButton);
 
 //Кнопка полноэкранного режима header
 document.getElementById("fullScreenBtn").addEventListener("click", function () {
