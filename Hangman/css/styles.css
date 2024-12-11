@@ -24,7 +24,7 @@ body {
   align-items: center;
   gap: 30px;
   height: 100vh;
-  margin: 20px 0 0;
+  margin: 50px 0 0;
 }
 
 #hangman-container {
@@ -160,6 +160,9 @@ button:disabled:active {
 }
 
 @media screen and (max-width: 580px) {
+  .container {
+    margin: 20px 0 0;
+  }
   .hidden-word span {
     width: 60px;
     height: 60px;
