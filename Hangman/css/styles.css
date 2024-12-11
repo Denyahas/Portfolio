@@ -1,0 +1,204 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1c1c;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+.none {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+  height: 100vh;
+  margin: 20px 0 0;
+}
+
+#hangman-container {
+  margin-top: 0px;
+  width: 90%;
+  max-width: 900px;
+  aspect-ratio: 2 / 1;
+  background-color: #fff;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hidden-word {
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hidden-word span {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 30px;
+  background-color: #fff;
+  width: 70px;
+  height: 70px;
+  border: 2px solid gray;
+  border-radius: 4px;
+}
+
+.alphabet {
+  background-color: #3d3d3d;
+  padding: 10px;
+  width: 90%;
+  max-width: 520px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+  border: 2px solid gray;
+}
+
+button {
+  width: 40px;
+  height: auto;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+button:active {
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+button:disabled:active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.loseOrWin {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max(50%, 280px);
+  height: 30%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  border: 3px solid #000;
+}
+
+.loseOrWin button {
+  width: auto;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  aspect-ratio: auto;
+}
+
+.loseOrWin button:hover {
+  background-color: #222222;
+}
+
+.loseOrWin button:active {
+  background-color: #313131;
+}
+
+@media screen and (max-width: 580px) {
+  .hidden-word span {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hidden-word span {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  button {
+    width: 35px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hidden-word span {
+    width: 45px;
+    height: 45px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .hidden-word span {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .hidden-word span {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+}

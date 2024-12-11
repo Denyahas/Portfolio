@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Виселица</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="hangman-container">
+        <svg
+          id="hangman"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 300 400"
+        >
+          <!-- Основа виселицы -->
+          <line
+            x1="50"
+            y1="350"
+            x2="250"
+            y2="350"
+            stroke="black"
+            stroke-width="4"
+          />
+          <line
+            x1="100"
+            y1="350"
+            x2="100"
+            y2="50"
+            stroke="black"
+            stroke-width="4"
+          />
+          <line
+            x1="102"
+            y1="52"
+            x2="202"
+            y2="52"
+            stroke="black"
+            stroke-width="4"
+          />
+          <line
+            x1="200"
+            y1="51"
+            x2="200"
+            y2="101.5"
+            stroke="black"
+            stroke-width="4"
+          />
+
+          <!-- Человечек -->
+          <circle
+            id="head"
+            cx="200"
+            cy="120"
+            r="20"
+            stroke="black"
+            stroke-width="4"
+            fill="none"
+            style="display: none"
+          />
+          <line
+            id="body"
+            x1="200"
+            y1="140"
+            x2="200"
+            y2="220"
+            stroke="black"
+            stroke-width="4"
+            style="display: none"
+          />
+          <line
+            id="left-arm"
+            x1="200"
+            y1="160"
+            x2="180"
+            y2="200"
+            stroke="black"
+            stroke-width="4"
+            style="display: none"
+          />
+          <line
+            id="right-arm"
+            x1="200"
+            y1="160"
+            x2="220"
+            y2="200"
+            stroke="black"
+            stroke-width="4"
+            style="display: none"
+          />
+          <line
+            id="left-leg"
+            x1="200"
+            y1="220"
+            x2="180"
+            y2="260"
+            stroke="black"
+            stroke-width="4"
+            style="display: none"
+          />
+          <line
+            id="right-leg"
+            x1="200"
+            y1="220"
+            x2="220"
+            y2="260"
+            stroke="black"
+            stroke-width="4"
+            style="display: none"
+          />
+        </svg>
+      </div>
+      <div class="hidden-word"></div>
+      <div class="alphabet">
+        <button type="button" class="button">А</button>
+        <button type="button" class="button">Б</button>
+        <button type="button" class="button">В</button>
+        <button type="button" class="button">Г</button>
+        <button type="button" class="button">Д</button>
+        <button type="button" class="button">Е</button>
+        <button type="button" class="button">Ё</button>
+        <button type="button" class="button">Ж</button>
+        <button type="button" class="button">З</button>
+        <button type="button" class="button">И</button>
+        <button type="button" class="button">Й</button>
+        <button type="button" class="button">К</button>
+        <button type="button" class="button">Л</button>
+        <button type="button" class="button">М</button>
+        <button type="button" class="button">Н</button>
+        <button type="button" class="button">О</button>
+        <button type="button" class="button">П</button>
+        <button type="button" class="button">Р</button>
+        <button type="button" class="button">С</button>
+        <button type="button" class="button">Т</button>
+        <button type="button" class="button">У</button>
+        <button type="button" class="button">Ф</button>
+        <button type="button" class="button">Х</button>
+        <button type="button" class="button">Ц</button>
+        <button type="button" class="button">Ч</button>
+        <button type="button" class="button">Ш</button>
+        <button type="button" class="button">Щ</button>
+        <button type="button" class="button">Ъ</button>
+        <button type="button" class="button">Ы</button>
+        <button type="button" class="button">Ь</button>
+        <button type="button" class="button">Э</button>
+        <button type="button" class="button">Ю</button>
+        <button type="button" class="button">Я</button>
+      </div>
+      <div class="overlay none">
+        <div class="loseOrWin none">
+          <h2></h2>
+          <h3></h3>
+          <button id="repeat">Repeat</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
