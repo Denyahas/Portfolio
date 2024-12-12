@@ -9,7 +9,6 @@
 body {
   background-color: #1c1c1c;
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
   user-select: none;
 }
 
@@ -24,13 +23,14 @@ body {
   align-items: center;
   gap: 30px;
   height: 100vh;
-  margin: 50px 0 0;
+  padding: 50px 0 0;
 }
 
 #hangman-container {
   margin-top: 0px;
   width: 90%;
   max-width: 900px;
+  height: auto;
   aspect-ratio: 2 / 1;
   background-color: #fff;
   border: 1px solid gray;
@@ -161,7 +161,7 @@ button:disabled:active {
 
 @media screen and (max-width: 580px) {
   .container {
-    margin: 20px 0 0;
+    padding: 40px 0 0;
   }
   .hidden-word span {
     width: 60px;
@@ -206,5 +206,17 @@ button:disabled:active {
     width: 36px;
     height: 36px;
     font-size: 22px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  #hangman-container {
+    aspect-ratio: 9 / 4;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  #hangman-container {
+    aspect-ratio: 3 / 1;
   }
 }
