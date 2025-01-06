@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>HTML Documentation</title>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <header>
+      <h1>HTML Documentation</h1>
+    </header>
+    <ul class="withoutMarker">
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#Main_HTML_Elements">Main HTML Elements</a></li>
+      <li><a class="nav-link" href="#Graphics_and_Multimedia">Graphics and Multimedia
+        </a></li>
+      <li><a class="nav-link" href="#HTML5_—_The_Evolution_of_HTML">HTML5 — The Evolution of HTML
+        </a></li>
+      <li><a class="nav-link" href="#Metadata_and_SEO">Metadata and SEO
+        </a></li>
+      <li><a class="nav-link" href="#Conclusion">Conclusion</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section id="Introduction" class="main-section">
+      <header>
+        <h2>Introduction</h2>
+      </header>
+      <p>HTML (HyperText Markup Language) is the standard markup language used to create web pages and web applications.
+        It is used to describe the structure of web documents using elements that browsers interpret to display content.
+        HTML is the foundation of every web page, and all websites on the internet are built using it.</p>
+      <p>The main purposes of HTML:</p>
+      <ul>
+        <li>Structuring the web page.</li>
+        <li>Formatting text and including multimedia content.</li>
+        <li>Organizing links for navigation between pages.</li>
+      </ul>
+    </section>
+    <section id="Main_HTML_Elements" class="main-section">
+      <header>
+        <h2>Main HTML Elements</h2>
+      </header>
+      <ul class="withoutMarker">
+        <li>
+          <h3>Structural Elements</h3>
+          <p>An HTML document begins with <code>!DOCTYPE html</code>, which indicates that the latest version of HTML is
+            being used. Next comes the root <code>html</code> element that contains all the other elements of the
+            document.</p>
+          <ul>
+            <li><code>head</code> — contains metadata (information about the document, links to CSS and JS).</li>
+            <li><code>title</code> — the title of the page, displayed on the browser tab.</li>
+            <li><code>body</code> — the main part of the page, where all visible content is placed.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Text Elements</h3>
+          <p>HTML provides various elements for formatting text:
+          <ul>
+            <li><code>h1&gt; - &lt;h6</code> — headings of different levels (from the largest to the smallest).
+            </li>
+            <li><code>p</code> — paragraph of text.</li>
+            <li><code>strong</code> and <code>em</code> — for bold and italic text, respectively.</li>
+            <li><code>ul</code> and <code>ol</code> — unordered and ordered lists, respectively.</li>
+            <li><code>list</code> — list item.</li>
+          </ul>
+          </p>
+        </li>
+
+        <li>
+          <h3>Hyperlinks</h3>
+          <p>One of the key features of HTML is the ability to create links between pages using the <code>a</code>
+            element:</p>
+          <ul>
+            <li>The <code class="withoutBrackets"><span class="atr-name">href</span></code> attribute specifies the URL to navigate to.</li>
+            <li>Example: <code>a <span class="atr-name">href</span>=<span class="atr-value">https://example.com"</span>&gt;<span class="code-text">Go to the website</span>&lt;/a</code>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Images</h3>
+          <p>Images are embedded in a webpage using the <code>img</code> element:</p>
+          <ul>
+            <li>The <code class="withoutBrackets"><span class="atr-name">src</span></code> attribute specifies the path to the image file.</li>
+            <li>The <code class="withoutBrackets"><span class="atr-name">alt</span></code> attribute contains a description of the image for
+              accessibility purposes or in case the image cannot be loaded.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Tables</h3>
+          <p>HTML supports creating tables for displaying data:</p>
+          <ul>
+            <li><code>table</code> — root element of a table.</li>
+            <li><code>tr</code> — table row.</li>
+            <li><code>td</code> — table data cell.</li>
+            <li><code>th</code> — table header cell.</li>
+          </ul>
+          <p>Example:</p>
+          <pre class="code-block">
+<code>table</code>
+  <code>tr</code>
+    <code>th&gt;<span class="code-text">Name</span>&lt;/th</code>
+    <code>th&gt;<span class="code-text">Age</span>&lt;/th</code>
+  <code>/tr</code>
+  <code>tr</code>
+    <code>td&gt;<span class="code-text">John</span>&lt;/td</code>
+    <code>td&gt;<span class="code-text">30</span>&lt;/td</code>
+  <code>/tr</code>
+<code>/table</code>
+          </pre>
+        </li>
+
+        <li class="withoutMarker">
+          <h3>Forms</h3>
+          <p>HTML provides powerful tools for creating forms, allowing interaction with the user:</p>
+          <ul>
+            <li><code>form</code> — the container for the form.</li>
+            <li><code>input</code> — various input fields (text, email, password, date).</li>
+            <li><code>button</code> — button to submit the form.</li>
+          </ul>
+          <p>Example:</p>
+          <pre>
+<code>form <span class="atr-name">action</span>=<span class="atr-value">"/submit"</span> <span class="atr-name">method</span>=<span class="atr-value">"POST"</span></code>
+  <code>label <span class="atr-name">for</span>=<span class="atr-value">"name"</span>&gt;<span class="code-text">Name:</span>&lt;/label</code>
+  <code>input <span class="atr-name">type</span>=<span class="atr-value">"text"</span> <span class="atr-name">id</span>=<span class="atr-value">"name"</span> <span class="atr-name">name</span>=<span class="atr-value">"name"</span></code>
+  <code>button <span class="atr-name">type</span>=<span class="atr-value">"submit"</span>&gt;<span class="code-text">Submit</span>&lt;/button</code>
+<code>/form</code>
+          </pre>
+        </li>
+      </ul>
+    </section>
+    
+    <section id="Graphics_and_Multimedia" class="main-section">
+      <header>
+        <h2>Graphics and Multimedia</h2>
+      </header>
+      <p>HTML supports embedded multimedia elements:</p>
+      <ul>
+        <li><code>img</code> for images.</li>
+        <li><code>audio</code> for audio.</li>
+        <li><code>video</code> for video.</li>
+      </ul>
+      <p>These elements allow direct playback of media files on the web page without additional plugins.</p>
+    </section>
+    <section id="HTML5_—_The_Evolution_of_HTML" class="main-section">
+      <header>
+        <h2>HTML5 — The Evolution of HTML</h2>
+      </header>
+      <p>HTML5 expanded the capabilities of previous HTML versions by introducing new semantic elements and APIs. It allowed developers to create more interactive web applications, improved multimedia support, and provided better support for mobile devices.</p>
+      <p>New semantic elements:</p>
+      <ul>
+        <li><code>header</code>, <code>footer</code> — for the header and footer of a page.</li>
+        <li><code>article</code>, <code>section</code> — for content structuring.</li>
+        <li><code>aside</code> — for content related to the main content.</li>
+      </ul>
+      <p>HTML5 also introduced APIs for working with local storage (LocalStorage), geolocation, and graphics (Canvas).</p>
+    </section>
+    <section id="Metadata_and_SEO" class="main-section">
+      <header>
+        <h2>Metadata and SEO</h2>
+      </header>
+      <p>Metadata is information about a web page that is not displayed to users but is used by browsers and search engines:</p>
+      <ul>
+        <li><code>meta <span class="atr-name">charset</span>=<span class="atr-value">"UTF-8"</span></code> — specifies the document's character encoding.</li>
+        <li><code>meta <span class="atr-name">name</span>=<span class="atr-value">"description"</span> <span class="atr-name">content</span>=<span class="atr-value">"Page description"</span></code> — a description of the page for search engines.</li>
+        <li><code>meta <span class="atr-name">name</span>=<span class="atr-value">"keywords"</span> <span class="atr-name">content</span>=<span class="atr-value">"keywords"</span></code> — keywords for SEO.</li>
+      </ul>
+    </section>
+    <section id="Conclusion" class="main-section">
+      <header>
+        <h2>Conclusion</h2>
+      </header>
+      <p>HTML is the foundational language for creating web pages. It provides basic tools for structuring and formatting content, as well as modern capabilities through HTML5 for working with multimedia and interactive elements. Understanding the basics of HTML is essential for anyone looking to develop websites or web applications.</p>
+    </section>
+  </main>
+</body>
+
+</html>

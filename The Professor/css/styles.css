@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Protest+Strike&display=swap");
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #da1920;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+::selection {
+  background: #da1920;
+  color: #fff;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url(https://txtrs.ru/textures/paper/paper-6-1.jpg);
+}
+
+#title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: min(15vw, 100px);
+  text-align: center;
+  margin: 0 0 30px;
+  color: #da1920;
+  text-shadow: 10px 10px 7px black;
+}
+
+a.link {
+  color: #da1920;
+  border-bottom: 2px solid;
+  text-decoration: none;
+}
+
+a.link:hover {
+  color: #c2151b;
+  border: none;
+}
+
+a.link:active {
+  color: #da1920;
+}
+
+main {
+  border-right: 7px solid #da1920;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto 150px;
+  position: relative;
+}
+
+#img-div {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto min(30%, 100px);
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+  box-shadow: 15px 15px 12px black;
+}
+
+figcaption,
+footer {
+  font-family: "Protest Strike", sans-serif;
+  text-align: center;
+  margin: 0 0 20px;
+  color: #133b44;
+  font-size: 18px;
+}
+
+p {
+  font-family: "Libre Baskerville", serif;
+  max-width: 700px;
+  margin: 30px auto 30px;
+  width: 80%;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 22px;
+  position: relative;
+  color: #081a24;
+}
+
+p:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -30px;
+  width: 40px;
+  height: 40px;
+  background-image: url(https://i.postimg.cc/2S1LbFk5/2.png);
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(5px 5px 3px black);
+}
+
+p:last-of-type::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background-image: url(https://i.postimg.cc/2S1LbFk5/2.png);
+  background-size: cover;
+  background-position: center;
+  transform: rotate(180deg);
+  filter: drop-shadow(-5px -5px 3px black);
+}
+
+footer {
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.gallery {
+  position: absolute;
+  top: 0;
+  right: -297px;
+  width: 290px;
+}
+
+.gallery img {
+  margin-bottom: 8.2px;
+  width: 100%;
+  aspect-ratio: 16/9;
+  box-shadow: 7px 7px 7px black;
+}
+
+@media screen and (max-width: 1500px) {
+  main {
+    border-right: none;
+  }
+
+  .gallery {
+    display: none;
+  }
+}

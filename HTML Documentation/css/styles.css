@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #f9f9fd;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #192130;
+  border-radius: 10px;
+}
+
+::selection {
+  background-color: #5c7abf;
+  color: white;
+}
+
+ul.withoutMarker {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0 0 50px;
+  background-color: #1f2738;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+main {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15%;
+}
+
+header h2 {
+  color: #5c7abf;
+  font-family: monospace;
+  font-size: 30px;
+  margin: 50px 0 0;
+}
+
+header h2::before {
+  content: "< ";
+}
+header h2::after {
+  content: " />";
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 30px 0 -5px 0;
+}
+
+nav {
+  height: 100%;
+  padding: 30px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: #192130;
+  width: 20%;
+  font-family: monospace;
+  transition: all 0.4s ease;
+  transition-delay: 0.1s;
+}
+
+nav h1 {
+  font-size: 25px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav a:active {
+  color: #5c7abf;
+}
+
+nav a:hover::before {
+  content: "<";
+  position: absolute;
+  left: -10px;
+}
+
+nav a:hover::after {
+  content: "/>";
+  position: absolute;
+  right: -25px;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ul > li {
+  margin: 0 0 10px;
+}
+
+pre {
+  background-color: #000f33;
+  padding: 15px 7px;
+  width: 100%;
+  overflow: auto;
+}
+
+code {
+  color: #a6a6a6;
+  background-color: #000f33;
+  padding: 3px 5px;
+  display: inline-block;
+  margin: 2px 3px;
+}
+
+code::before {
+  content: "<";
+}
+code::after {
+  content: ">";
+}
+
+.code-text {
+  color: #e3e3e3;
+}
+
+.atr-name {
+  color: cyan;
+}
+.atr-value {
+  color: orange;
+}
+
+code.withoutBrackets::before,
+code.withoutBrackets::after {
+  content: "";
+}
+
+@media screen and (max-width: 1150px) {
+  nav h1 {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  nav {
+    width: 30%;
+  }
+  main {
+    padding-left: 23%;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  main {
+    padding-left: 0;
+  }
+
+  nav {
+    display: none;
+  }
+}

@@ -509,6 +509,7 @@ h2.scrollAnim {
 }
 
 .cardImg {
+  aspect-ratio: 2 / 1;
   width: 100%;
   border-radius: var(--borderRadius);
   border: var(--border);
